@@ -6,15 +6,16 @@ export default function Footer() {
     console.log(val)
   const dispatch=  useDispatch()
   return (
-    <div style={{background:"#B0C4DE"}}>
-      <button style={{fontSize:"30px",border:"0px" , background:"transparent"}} onClick={()=>dispatch({
+    <div style={{background:"#B0C4DE", marginTop:"562px"}}>
+      <button style={{fontSize:"30px",border:"0px" , background:"transparent" , paddingLeft:"600px"}} onClick={()=>dispatch({
         type:"-"
       })} >〈</button>
-      <button style={{fontSize:"30px" , border:"0px" , background:"transparent"}} onClick={()=>dispatch({
+ 
+      <button style={{fontSize:"30px" , border:"0px" , background:"transparent", paddingLeft:"20px"}} onClick={()=>dispatch({
         type:"+"
       })}>〉</button>
 
-      <span>{val}/6</span>
+      <span style={{fontSize:"22px"}}>{val}/6</span>
     </div>
   )
 }
