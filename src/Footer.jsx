@@ -13,6 +13,8 @@ export default function Footer() {
       <button style={{fontSize:"30px" , border:"0px" , background:"transparent"}} onClick={()=>dispatch({
         type:"+"
       })}>〉</button>
+
+      <span>{val}/6</span>
     </div>
   )
 }
