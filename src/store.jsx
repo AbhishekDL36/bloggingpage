@@ -1,7 +1,9 @@
 import { createStore } from "redux"
 
 const initialObj={
-    pageNum:1
+    pageNum:1,
+    isAuth:false,
+    userName:""
 }
 
 const reducerfn= (state=initialObj,action)=>{
@@ -35,6 +37,11 @@ const reducerfn= (state=initialObj,action)=>{
                 pageNum:state.pageNum-1
             }
         }
+case "getAuth": return {
+    ...state,
+    isAuth:true,
+    userName:action.payload.displayName
+}
 
         default: return state;
      
