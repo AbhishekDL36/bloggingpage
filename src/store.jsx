@@ -40,7 +40,15 @@ const reducerfn= (state=initialObj,action)=>{
 case "getAuth": return {
     ...state,
     isAuth:true,
-    userName:action.payload.displayName
+    userName:action.payload.name.displayName,
+    logoutfn:action.payload.logout
+}
+
+case "logout":return {
+...state,
+isAuth:false,
+userName:"guest"
+
 }
 
         default: return state;

@@ -1,5 +1,4 @@
 
-
 import React, { useState } from "react";
 import { auth, provider, signInWithPopup } from "./firebase";
 import { useDispatch } from "react-redux";
@@ -16,13 +15,21 @@ export default function Signup() {
       console.log("User Info:", result.user);
       dispatch({
         type: "getAuth",
-        payload: result.user,
+        payload: {name:result.user,
+            logout:handleLogout
+        },
       });
     } catch (error) {
       console.error("Error Signing In:", error);
     }
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("nameval");
+    setUser(null);
+   
+  };
+  
   return (
     <div
       style={{
