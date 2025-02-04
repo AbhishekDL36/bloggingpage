@@ -6,7 +6,7 @@ export default function Footer() {
     console.log(val)
   const dispatch=  useDispatch()
   return (
-    <div style={{background:"#B0C4DE", marginTop:"562px"}}>
+    <div style={{background:"#B0C4DE", marginTop:"23px"}}>
       <button style={{fontSize:"30px",border:"0px" , background:"transparent" , paddingLeft:"600px"}} onClick={()=>dispatch({
         type:"-"
       })} >〈</button>
