@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Main from "./Main";
 import FirstBlog from "./FirstBlog";
+import Blogsintro from "./Blogsintro";
 
 function App() {
 
@@ -12,11 +13,11 @@ function App() {
     <div className="bg-gray-300">
      <Header/>
      <Routes>
-      <Route path="/" element={<Main/>} />
+      <Route path="/" element={<Blogsintro/>} />
       <Route path="/blog" element={<FirstBlog/>}/>
      </Routes>
      
-     <Footer/>
+    
     </div>
   );
 }
