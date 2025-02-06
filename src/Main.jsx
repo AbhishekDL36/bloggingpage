@@ -2,12 +2,13 @@
 
 import React, { useEffect, useState } from 'react';
 import data from './res.json';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 export default function Main() {
   const page= useSelector(state=>state.pageNum)
   const [val,setVal] = useState()
-
+const dispatch= useDispatch()
   useEffect(() => {
     switch(page) {
       case 1:
@@ -57,6 +58,7 @@ export default function Main() {
 
            
             return (
+              <Link to={'blog'}> 
               <div
                 key={index}
                 style={{
@@ -70,6 +72,11 @@ export default function Main() {
                   transition: "transform 0.3s ease",
                   
                 }}
+
+                onClick={()=>dispatch({
+                  type:"blogClicked",
+                  payload:val+index
+                })}
               >
                 <div style={{ fontSize: "20px", fontWeight: "bold", color: "#333" }}>
                   <span style={{ marginRight: "5px" }}>{val + index+1}.</span>
@@ -87,6 +94,7 @@ export default function Main() {
                   ~{dataa.author}
                 </p>
               </div>
+              </Link>
             ) ;
           })
         ) : (

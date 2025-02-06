@@ -3,7 +3,8 @@ import { createStore } from "redux"
 const initialObj={
     pageNum:1,
     isAuth:false,
-    userName:""
+    userName:"",
+    blogclicked:-1
 }
 
 const reducerfn= (state=initialObj,action)=>{
@@ -51,9 +52,16 @@ userName:"guest"
 
 }
 
+case "blogClicked":return {
+...state,
+blogclicked:action.payload
+}
+
         default: return state;
      
     }
 }
 
 export const store= createStore(reducerfn)
+
+store.subscribe(()=>console.log(store.getState()))

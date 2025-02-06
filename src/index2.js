@@ -22,6 +22,7 @@ return ()=>clearTimeout(timer)
       {
         isAuth?(
             isTimer?
+            
             <App/>
             
             : 
