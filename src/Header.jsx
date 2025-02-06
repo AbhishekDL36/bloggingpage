@@ -18,9 +18,9 @@ const handlelogout=()=>{
 }
 
   return (<div>
- <nav style={{background:"#B0C4DE", height:"63px" , paddingTop:"15px" , paddingLeft:"580px", fontSize:"26px",fontFamily:"cursive"}}>
-      BLOGGING WEBSITE
-    <button onClick={handlelogout}>logout</button>
+ <nav style={{background:"#B0C4DE", height:"63px" , paddingTop:"15px" , paddingLeft:"580px", fontSize:"26px",fontFamily:"cursive" , display:"flex"}}>
+    <p> BLOGGING WEBSITE </p> 
+    <button onClick={handlelogout} style={{marginLeft:"400px" , padding:"0px" ,height:"40px", width:"120px",background:"transparent",borderRadius:"10px", fontFamily:"fantasy",fontSize:"25px"}}>logout</button>
     </nav>
   <div style={{textAlign:"center" , fontSize:"25px" ,paddingTop:"20px", fontFamily:"fantasy"}}>Hello , {valuee } </div>  
   

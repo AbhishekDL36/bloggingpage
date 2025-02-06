@@ -23,7 +23,13 @@ return ()=>clearTimeout(timer)
         isAuth?(
             isTimer?
             <App/>
-            : <p>LOADING...</p>
+            
+            : 
+            <div style={{display:"flex", justifyContent:"center",alignItems:"center",height:"100vh"}}>
+ <p>LOADING...</p>
+              </div>
+            
+           
         )
       
         : <Welcomepage/>

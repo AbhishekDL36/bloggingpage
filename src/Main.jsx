@@ -72,7 +72,7 @@ export default function Main() {
                 }}
               >
                 <div style={{ fontSize: "20px", fontWeight: "bold", color: "#333" }}>
-                  <span style={{ marginRight: "5px" }}>{val + index}.</span>
+                  <span style={{ marginRight: "5px" }}>{val + index+1}.</span>
                   {dataa.title}
                 </div>
                 <p

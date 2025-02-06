@@ -48,6 +48,8 @@ export default function Signup() {
           width: "100%", // Make sure the container is responsive
         }}
       >
+
+        <p style={{marginLeft:"-54px",color:"#4285F4"}}>YOU NEED TO SIGN-IN BEFORE VIEWING</p>
         <button
           onClick={handleSignIn}
           aria-label="Sign in with Google" // Accessibility improvement
